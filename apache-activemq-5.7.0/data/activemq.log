@@ -1,0 +1,750 @@
+2018-12-03 21:06:13,829 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@234bef66: startup date [Mon Dec 03 21:06:13 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-12-03 21:06:15,432 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2018-12-03 21:06:15,451 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-12-03 21:06:16,002 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-65122-1543851375819-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-12-03 21:06:16,065 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-12-03 21:06:16,066 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2018-12-03 21:06:16,070 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-65122-1543851375819-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-12-03 21:06:16,070 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-12-03 21:06:16,073 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 80745 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2018-12-03 21:06:16,143 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2018-12-03 21:06:16,480 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2018-12-03 21:06:16,482 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-03 21:06:16,593 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-12-03 21:06:17,044 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-03 21:06:17,073 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-03 21:06:17,107 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-03 21:06:17,139 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-03 21:06:17,176 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-03 21:06:17,251 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2018-12-04 11:02:12,454 | INFO  | Connector vm://localhost Started | org.apache.activemq.broker.TransportConnector | qtp227755469-30
+2018-12-04 11:03:34,397 | WARN  | /admin/createSubscriber.action | org.eclipse.jetty.servlet.ServletHandler | qtp227755469-33
+java.lang.IllegalArgumentException: No JMSDestination parameter specified
+	at org.apache.activemq.web.DestinationFacade.getValidDestination(DestinationFacade.java:112)
+	at org.apache.activemq.web.controller.CreateSubscriber.handleRequest(CreateSubscriber.java:53)
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:48)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:790)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:669)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:585)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:713)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:806)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:83)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:96)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.obtainContent(SiteMeshFilter.java:129)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:77)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:931)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:992)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2018-12-04 14:07:28,468 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62519 failed: java.io.IOException: Unknown data type: 47 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:62519@61616
+2018-12-04 14:07:28,489 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62519 failed: org.apache.activemq.transport.InactivityIOException: Cannot send, channel has already failed: tcp://0:0:0:0:0:0:0:1:62519 | org.apache.activemq.broker.TransportConnection.Transport | Async Exception Handler
+2018-12-04 14:07:28,913 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62520 failed: java.io.IOException: Unknown data type: 47 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:62520@61616
+2018-12-04 14:07:28,925 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62520 failed: org.apache.activemq.transport.InactivityIOException: Cannot send, channel has already failed: tcp://0:0:0:0:0:0:0:1:62520 | org.apache.activemq.broker.TransportConnection.Transport | Async Exception Handler
+2018-12-04 14:07:31,820 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62523 failed: java.io.IOException: Unknown data type: 47 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:62523@61616
+2018-12-04 14:07:31,823 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62523 failed: org.apache.activemq.transport.InactivityIOException: Cannot send, channel has already failed: tcp://0:0:0:0:0:0:0:1:62523 | org.apache.activemq.broker.TransportConnection.Transport | Async Exception Handler
+2018-12-04 14:07:36,923 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62526 failed: java.io.IOException: Unknown data type: 47 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:62526@61616
+2018-12-04 14:07:36,928 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62526 failed: org.apache.activemq.transport.InactivityIOException: Cannot send, channel has already failed: tcp://0:0:0:0:0:0:0:1:62526 | org.apache.activemq.broker.TransportConnection.Transport | Async Exception Handler
+2018-12-04 14:08:06,992 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62537 failed: java.io.IOException: Unknown data type: 47 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:62537@61616
+2018-12-04 14:08:06,997 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62537 failed: org.apache.activemq.transport.InactivityIOException: Cannot send, channel has already failed: tcp://0:0:0:0:0:0:0:1:62537 | org.apache.activemq.broker.TransportConnection.Transport | Async Exception Handler
+2018-12-04 14:09:07,060 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62560 failed: java.io.IOException: Unknown data type: 47 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:62560@61616
+2018-12-04 14:09:07,063 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:62560 failed: org.apache.activemq.transport.InactivityIOException: Cannot send, channel has already failed: tcp://0:0:0:0:0:0:0:1:62560 | org.apache.activemq.broker.TransportConnection.Transport | Async Exception Handler
+2018-12-04 18:11:20,888 | WARN  | /admin/deleteDestination.action | org.eclipse.jetty.servlet.ServletHandler | qtp227755469-33
+java.lang.NullPointerException
+	at org.apache.activemq.web.handler.BindingBeanNameUrlHandlerMapping.getHandlerInternal(BindingBeanNameUrlHandlerMapping.java:57)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:184)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:930)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:915)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:753)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:669)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:574)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:693)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:806)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:83)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:96)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.obtainContent(SiteMeshFilter.java:129)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:77)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2018-12-04 18:11:38,411 | WARN  | /admin/deleteDestination.action | org.eclipse.jetty.servlet.ServletHandler | qtp227755469-24
+java.lang.NullPointerException
+	at org.apache.activemq.web.handler.BindingBeanNameUrlHandlerMapping.getHandlerInternal(BindingBeanNameUrlHandlerMapping.java:57)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:184)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:930)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:915)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:753)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:669)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:574)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:693)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:806)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:83)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:96)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.obtainContent(SiteMeshFilter.java:129)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:77)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2018-12-07 11:15:14,368 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Fri Dec 07 11:15:14 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-12-07 11:15:16,102 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2018-12-07 11:15:16,196 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-12-07 11:15:16,915 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-07 11:15:16,993 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-07 11:15:16,993 | INFO  | Recovery replayed 2 operations from the journal in 0.063 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-07 11:15:17,180 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-50480-1544161517024-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-12-07 11:15:17,305 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-12-07 11:15:17,305 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2018-12-07 11:15:17,305 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-50480-1544161517024-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-12-07 11:15:17,305 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-12-07 11:15:17,305 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 75710 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2018-12-07 11:15:17,399 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2018-12-07 11:15:18,008 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2018-12-07 11:15:18,008 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-07 11:15:18,258 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-12-07 11:15:18,837 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-07 11:15:18,930 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-07 11:15:18,962 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-07 11:15:18,992 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-07 11:15:19,070 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-07 11:15:19,117 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2018-12-09 18:40:45,308 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Sun Dec 09 18:40:45 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-12-09 18:40:47,208 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2018-12-09 18:40:47,251 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-12-09 18:40:47,992 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-09 18:40:48,039 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-09 18:40:48,039 | INFO  | Recovery replayed 2 operations from the journal in 0.039 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-09 18:40:48,243 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-52141-1544361048062-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-12-09 18:40:48,382 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-12-09 18:40:48,385 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2018-12-09 18:40:48,392 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-52141-1544361048062-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-12-09 18:40:48,393 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-12-09 18:40:48,396 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 75875 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2018-12-09 18:40:48,520 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2018-12-09 18:40:49,146 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2018-12-09 18:40:49,150 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-09 18:40:49,386 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-12-09 18:40:50,052 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-09 18:40:50,147 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-09 18:40:50,177 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-09 18:40:50,221 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-09 18:40:50,284 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-09 18:40:50,330 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2018-12-09 20:23:20,266 | WARN  | Transport Connection to: tcp://127.0.0.1:52929 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52929@61616
+2018-12-09 20:25:24,418 | WARN  | Transport Connection to: tcp://127.0.0.1:52992 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52992@61616
+2018-12-09 20:27:16,076 | WARN  | Transport Connection to: tcp://127.0.0.1:53023 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53023@61616
+2018-12-09 20:29:06,359 | WARN  | Transport Connection to: tcp://127.0.0.1:53037 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53037@61616
+2018-12-09 20:30:12,732 | WARN  | Transport Connection to: tcp://127.0.0.1:53061 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53061@61616
+2018-12-09 20:32:16,557 | WARN  | Transport Connection to: tcp://127.0.0.1:53075 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53075@61616
+2018-12-09 20:32:24,397 | WARN  | Transport Connection to: tcp://127.0.0.1:53056 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53056@61616
+2018-12-09 20:32:29,524 | WARN  | Transport Connection to: tcp://127.0.0.1:53011 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53011@61616
+2018-12-09 20:33:43,524 | WARN  | Transport Connection to: tcp://127.0.0.1:53095 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53095@61616
+2018-12-09 20:34:40,843 | WARN  | Transport Connection to: tcp://127.0.0.1:53110 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53110@61616
+2018-12-09 20:36:26,785 | WARN  | Transport Connection to: tcp://127.0.0.1:53125 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53125@61616
+2018-12-09 20:36:31,302 | WARN  | Transport Connection to: tcp://127.0.0.1:53120 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53120@61616
+2018-12-09 20:41:38,655 | WARN  | Transport Connection to: tcp://127.0.0.1:53167 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53167@61616
+2018-12-09 20:43:25,726 | WARN  | Transport Connection to: tcp://127.0.0.1:53181 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53181@61616
+2018-12-09 20:44:02,419 | WARN  | Transport Connection to: tcp://127.0.0.1:54645 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54645@61616
+2018-12-09 20:51:02,964 | WARN  | Transport Connection to: tcp://127.0.0.1:54652 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54652@61616
+2018-12-09 20:52:21,537 | WARN  | Transport Connection to: tcp://127.0.0.1:54718 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54718@61616
+2018-12-09 20:53:59,599 | WARN  | Transport Connection to: tcp://127.0.0.1:54739 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54739@61616
+2018-12-09 20:54:48,364 | WARN  | Transport Connection to: tcp://127.0.0.1:54751 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54751@61616
+2018-12-09 20:55:28,369 | WARN  | Transport Connection to: tcp://127.0.0.1:54761 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54761@61616
+2018-12-09 20:59:24,421 | WARN  | Transport Connection to: tcp://127.0.0.1:54769 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54769@61616
+2018-12-09 21:41:35,957 | WARN  | Transport Connection to: tcp://127.0.0.1:54807 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54807@61616
+2018-12-09 21:45:45,121 | WARN  | Transport Connection to: tcp://127.0.0.1:55246 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55246@61616
+2018-12-09 21:46:45,478 | WARN  | Transport Connection to: tcp://127.0.0.1:55270 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55270@61616
+2018-12-09 21:47:19,315 | WARN  | Transport Connection to: tcp://127.0.0.1:55274 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55274@61616
+2018-12-09 21:48:31,824 | WARN  | Transport Connection to: tcp://127.0.0.1:55280 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55280@61616
+2018-12-10 10:27:26,888 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Mon Dec 10 10:27:26 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-12-10 10:27:28,017 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2018-12-10 10:27:28,037 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-12-10 10:27:28,275 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-10 10:27:28,312 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-10 10:27:28,313 | INFO  | Recovery replayed 2 operations from the journal in 0.028 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-10 10:27:28,461 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-60082-1544417848336-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-12-10 10:27:28,547 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-12-10 10:27:28,548 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2018-12-10 10:27:28,550 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-60082-1544417848336-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-12-10 10:27:28,550 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-12-10 10:27:28,552 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 75862 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2018-12-10 10:27:28,651 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2018-12-10 10:27:29,451 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2018-12-10 10:27:29,451 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-10 10:27:29,650 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-12-10 10:27:30,239 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-10 10:27:30,268 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-10 10:27:30,287 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-10 10:27:30,328 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-10 10:27:30,382 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-10 10:27:30,497 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2018-12-10 12:27:08,092 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Mon Dec 10 12:27:08 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-12-10 12:27:09,493 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2018-12-10 12:27:09,520 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-12-10 12:27:09,733 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-10 12:27:09,766 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-10 12:27:09,767 | INFO  | Recovery replayed 2 operations from the journal in 0.027 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-10 12:27:09,921 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-61599-1544425029794-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-12-10 12:27:10,047 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-12-10 12:27:10,048 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2018-12-10 12:27:10,050 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-61599-1544425029794-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-12-10 12:27:10,051 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-12-10 12:27:10,052 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 75889 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2018-12-10 12:27:10,160 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2018-12-10 12:27:10,605 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2018-12-10 12:27:10,608 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-10 12:27:10,774 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-12-10 12:27:11,165 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-10 12:27:11,221 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-10 12:27:11,269 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-10 12:27:11,334 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-10 12:27:11,382 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-10 12:27:11,428 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2018-12-10 18:23:05,550 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Mon Dec 10 18:23:05 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-12-10 18:23:07,837 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2018-12-10 18:23:07,879 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-12-10 18:23:10,078 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-10 18:23:10,157 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-10 18:23:10,158 | INFO  | Recovery replayed 2 operations from the journal in 0.061 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-10 18:23:10,443 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-49277-1544446390192-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-12-10 18:23:10,651 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-12-10 18:23:10,653 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2018-12-10 18:23:10,658 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-49277-1544446390192-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-12-10 18:23:10,659 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-12-10 18:23:10,664 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 75788 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2018-12-10 18:23:10,855 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2018-12-10 18:23:11,632 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2018-12-10 18:23:11,633 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-10 18:23:11,917 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-12-10 18:23:12,704 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-10 18:23:12,775 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-10 18:23:12,818 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-10 18:23:12,868 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-10 18:23:13,001 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-10 18:23:13,062 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2018-12-19 14:18:06,531 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Wed Dec 19 14:18:06 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-12-19 14:18:08,540 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2018-12-19 14:18:08,572 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-12-19 14:18:09,425 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-19 14:18:09,550 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-19 14:18:09,553 | INFO  | Recovery replayed 2 operations from the journal in 0.101 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-19 14:18:09,855 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-63457-1545209289620-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-12-19 14:18:10,027 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-12-19 14:18:10,028 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2018-12-19 14:18:10,033 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-63457-1545209289620-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-12-19 14:18:10,034 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-12-19 14:18:10,036 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 76214 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2018-12-19 14:18:10,134 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2018-12-19 14:18:10,634 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2018-12-19 14:18:10,635 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-19 14:18:11,027 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-12-19 14:18:11,738 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-19 14:18:11,812 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-19 14:18:11,843 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-19 14:18:11,885 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-19 14:18:11,955 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-19 14:18:12,038 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2018-12-22 19:10:15,666 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Sat Dec 22 19:10:15 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-12-22 19:10:17,662 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2018-12-22 19:10:17,725 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-12-22 19:10:18,819 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-22 19:10:18,885 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-22 19:10:18,886 | INFO  | Recovery replayed 2 operations from the journal in 0.059 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-22 19:10:19,107 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-57582-1545486018912-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-12-22 19:10:19,281 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-12-22 19:10:19,282 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2018-12-22 19:10:19,287 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-57582-1545486018912-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-12-22 19:10:19,288 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-12-22 19:10:19,291 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 74309 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2018-12-22 19:10:19,489 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2018-12-22 19:10:20,145 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2018-12-22 19:10:20,146 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-22 19:10:20,401 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-12-22 19:10:21,240 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-22 19:10:21,383 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-22 19:10:21,428 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-22 19:10:21,504 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-22 19:10:21,652 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-22 19:10:21,744 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2018-12-22 19:26:11,015 | WARN  | Transport Connection to: tcp://106.200.130.194:20505 failed: java.io.IOException: Wire format negotiation timeout: peer did not send his wire format. | org.apache.activemq.broker.TransportConnection.Transport | Async Exception Handler
+2018-12-24 16:48:26,722 | WARN  | Transport Connection to: tcp://127.0.0.1:49557 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49557@61616
+2018-12-24 18:49:36,330 | WARN  | /admin/deleteDestination.action | org.eclipse.jetty.servlet.ServletHandler | qtp657736958-34
+java.lang.NullPointerException
+	at org.apache.activemq.web.handler.BindingBeanNameUrlHandlerMapping.getHandlerInternal(BindingBeanNameUrlHandlerMapping.java:57)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:184)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:930)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:915)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:753)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:669)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:574)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:693)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:806)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:83)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:96)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.obtainContent(SiteMeshFilter.java:129)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:77)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2018-12-24 18:49:44,693 | WARN  | /admin/deleteDestination.action | org.eclipse.jetty.servlet.ServletHandler | qtp657736958-27
+java.lang.NullPointerException
+	at org.apache.activemq.web.handler.BindingBeanNameUrlHandlerMapping.getHandlerInternal(BindingBeanNameUrlHandlerMapping.java:57)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:184)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:930)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:915)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:753)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:669)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:574)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:693)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:806)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:83)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:96)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.obtainContent(SiteMeshFilter.java:129)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:77)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2018-12-24 19:03:08,457 | WARN  | Transport Connection to: tcp://127.0.0.1:51591 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:51591@61616
+2018-12-24 19:13:35,800 | WARN  | Transport Connection to: tcp://127.0.0.1:52081 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52081@61616
+2018-12-24 19:38:13,927 | WARN  | Transport Connection to: tcp://127.0.0.1:52327 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52327@61616
+2018-12-24 19:46:38,135 | WARN  | Transport Connection to: tcp://127.0.0.1:52574 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52574@61616
+2018-12-24 19:46:41,359 | WARN  | Transport Connection to: tcp://127.0.0.1:52313 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52313@61616
+2018-12-24 19:46:44,270 | WARN  | Transport Connection to: tcp://127.0.0.1:50551 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:50551@61616
+2018-12-24 19:46:47,386 | WARN  | Transport Connection to: tcp://127.0.0.1:49766 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49766@61616
+2018-12-25 10:22:33,529 | WARN  | Transport Connection to: tcp://127.0.0.1:52728 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52728@61616
+2018-12-25 10:22:44,045 | WARN  | Transport Connection to: tcp://127.0.0.1:52756 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52756@61616
+2018-12-25 16:12:19,651 | WARN  | Transport Connection to: tcp://127.0.0.1:55182 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55182@61616
+2018-12-25 16:13:09,073 | WARN  | Transport Connection to: tcp://127.0.0.1:55188 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55188@61616
+2018-12-25 16:20:41,006 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=testtopic,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:55326@61616
+2018-12-25 16:21:03,665 | WARN  | Failed to add Connection ID:Madhan-55336-1545735063311-1:0, reason: javax.jms.InvalidClientIDException: Broker: localhost - Client: 12345 already connected from tcp://127.0.0.1:55326 | org.apache.activemq.broker.TransportConnection | ActiveMQ Transport: tcp:///127.0.0.1:55337@61616
+2018-12-25 16:21:34,322 | WARN  | Transport Connection to: tcp://127.0.0.1:55337 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55337@61616
+2018-12-25 16:21:45,535 | WARN  | Transport Connection to: tcp://127.0.0.1:55326 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55326@61616
+2018-12-27 12:56:24,230 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Thu Dec 27 12:56:24 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-12-27 12:56:26,295 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2018-12-27 12:56:26,360 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-12-27 12:56:27,036 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-27 12:56:27,345 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-27 12:56:27,346 | INFO  | Recovery replayed 2 operations from the journal in 0.068 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-12-27 12:56:27,590 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-52540-1545895587396-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-12-27 12:56:27,757 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-12-27 12:56:27,757 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2018-12-27 12:56:27,762 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-52540-1545895587396-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-12-27 12:56:27,762 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-12-27 12:56:27,764 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 76031 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2018-12-27 12:56:28,012 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2018-12-27 12:56:28,656 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2018-12-27 12:56:28,656 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-27 12:56:28,919 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-12-27 12:56:29,943 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-27 12:56:30,025 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-27 12:56:30,067 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-27 12:56:30,133 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2018-12-27 12:56:30,199 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2018-12-27 12:56:30,283 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2018-12-27 20:56:54,311 | WARN  | Transport Connection to: tcp://127.0.0.1:64927 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:64927@61616
+2018-12-27 21:51:07,344 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=TEST_TOPIC,clientId=123456 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:53231@61616
+2018-12-27 21:51:21,607 | WARN  | Transport Connection to: tcp://127.0.0.1:53231 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53231@61616
+2018-12-27 21:51:26,019 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=testtopic,clientId=123456 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:53235@61616
+2018-12-27 21:51:27,004 | WARN  | Transport Connection to: tcp://192.168.1.204:50866 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.1.204:50866@61616
+2018-12-27 21:51:36,750 | WARN  | Transport Connection to: tcp://127.0.0.1:53235 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53235@61616
+2018-12-27 21:52:26,305 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=test,clientId=123456 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:53251@61616
+2018-12-27 21:52:56,715 | WARN  | Transport Connection to: tcp://127.0.0.1:53251 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53251@61616
+2018-12-27 21:53:34,225 | WARN  | Transport Connection to: tcp://127.0.0.1:53261 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53261@61616
+2018-12-27 21:57:28,350 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB12345,destinationType=Topic,destinationName=test1,clientId=1234567 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:53297@61616
+2018-12-27 21:58:09,102 | WARN  | Transport Connection to: tcp://127.0.0.1:53297 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53297@61616
+2018-12-27 22:00:28,900 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB12345,destinationType=Topic,destinationName=test12,clientId=1234567 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:53333@61616
+2018-12-27 22:01:36,351 | WARN  | Transport Connection to: tcp://127.0.0.1:53343 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53343@61616
+2018-12-27 22:01:59,726 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB12345,destinationType=Topic,destinationName=test123,clientId=1234567 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:53351@61616
+2018-12-27 22:02:50,508 | WARN  | Transport Connection to: tcp://127.0.0.1:53351 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53351@61616
+2018-12-27 22:03:08,330 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB12345,destinationType=Topic,destinationName=test1234,clientId=1234567 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:53363@61616
+2018-12-27 22:03:15,779 | WARN  | Transport Connection to: tcp://127.0.0.1:53363 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53363@61616
+2018-12-27 22:04:22,945 | WARN  | Transport Connection to: tcp://127.0.0.1:53375 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53375@61616
+2018-12-27 22:08:07,644 | WARN  | Transport Connection to: tcp://127.0.0.1:53396 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53396@61616
+2018-12-27 22:15:39,889 | WARN  | Transport Connection to: tcp://127.0.0.1:53420 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53420@61616
+2018-12-27 22:16:22,082 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=test_data,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:53643@61616
+2018-12-27 22:18:06,708 | WARN  | Transport Connection to: tcp://127.0.0.1:53643 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53643@61616
+2018-12-27 22:19:47,285 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=test_data1,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:53679@61616
+2018-12-27 23:02:22,398 | WARN  | Transport Connection to: tcp://127.0.0.1:54573 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54573@61616
+2018-12-27 23:02:58,278 | WARN  | Transport Connection to: tcp://127.0.0.1:53679 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53679@61616
+2018-12-27 23:12:28,190 | WARN  | Transport Connection to: tcp://127.0.0.1:54649 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54649@61616
+2018-12-27 23:38:20,300 | WARN  | Transport Connection to: tcp://127.0.0.1:54973 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54973@61616
+2018-12-27 23:39:31,596 | WARN  | Transport Connection to: tcp://127.0.0.1:54996 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54996@61616
+2018-12-27 23:53:41,185 | WARN  | Transport Connection to: tcp://127.0.0.1:55175 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55175@61616
+2018-12-28 11:12:41,706 | WARN  | Transport Connection to: tcp://127.0.0.1:55181 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55181@61616
+2018-12-28 11:19:57,223 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=test_topic100,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:55447@61616
+2018-12-28 11:20:25,498 | WARN  | Transport Connection to: tcp://127.0.0.1:55447 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55447@61616
+2018-12-28 11:21:30,248 | WARN  | Transport Connection to: tcp://127.0.0.1:55466 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55466@61616
+2018-12-28 13:47:18,200 | WARN  | /admin/deleteDestination.action | org.eclipse.jetty.servlet.ServletHandler | qtp1944798106-30
+java.lang.NullPointerException
+	at org.apache.activemq.web.handler.BindingBeanNameUrlHandlerMapping.getHandlerInternal(BindingBeanNameUrlHandlerMapping.java:57)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:184)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:930)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:915)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:753)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:669)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:574)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:693)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:806)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:83)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:96)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.obtainContent(SiteMeshFilter.java:129)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:77)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2018-12-28 13:47:24,257 | WARN  | /admin/deleteDestination.action | org.eclipse.jetty.servlet.ServletHandler | qtp1944798106-31
+java.lang.NullPointerException
+	at org.apache.activemq.web.handler.BindingBeanNameUrlHandlerMapping.getHandlerInternal(BindingBeanNameUrlHandlerMapping.java:57)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:184)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:930)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:915)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:753)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:669)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:574)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:693)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:806)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:83)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:96)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.obtainContent(SiteMeshFilter.java:129)
+	at com.opensymphony.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:77)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:534)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2018-12-28 15:37:47,248 | WARN  | Transport Connection to: tcp://127.0.0.1:52207 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52207@61616
+2018-12-28 15:46:19,981 | WARN  | Transport Connection to: tcp://127.0.0.1:52417 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52417@61616
+2018-12-28 15:51:41,325 | WARN  | Transport Connection to: tcp://127.0.0.1:52678 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52678@61616
+2018-12-28 15:52:04,082 | WARN  | Transport Connection to: tcp://127.0.0.1:52676 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52676@61616
+2018-12-28 15:52:33,511 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=mk,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:52996@61616
+2018-12-28 15:52:50,075 | WARN  | Transport Connection to: tcp://127.0.0.1:52996 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52996@61616
+2018-12-28 15:52:53,460 | WARN  | Transport Connection to: tcp://127.0.0.1:52990 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52990@61616
+2018-12-28 16:43:42,463 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=test_data1,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:64817@61616
+2018-12-28 16:43:59,525 | WARN  | Transport Connection to: tcp://127.0.0.1:64817 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:64817@61616
+2018-12-28 18:15:03,898 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=mk,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:63796@61616
+2018-12-28 18:43:13,391 | WARN  | Transport Connection to: tcp://127.0.0.1:64358 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:64358@61616
+2018-12-28 18:44:20,210 | WARN  | Transport Connection to: tcp://127.0.0.1:64373 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:64373@61616
+2018-12-28 18:44:39,426 | WARN  | Transport Connection to: tcp://127.0.0.1:64375 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:64375@61616
+2018-12-28 18:50:56,250 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=madhan,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:64516@61616
+2018-12-28 18:58:58,475 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=sairam,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:59950@61616
+2018-12-28 19:20:22,854 | WARN  | Transport Connection to: tcp://127.0.0.1:60540 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:60540@61616
+2018-12-28 19:20:44,205 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=madhan,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:60568@61616
+2018-12-29 14:53:14,698 | WARN  | Transport Connection to: tcp://192.168.1.16:64114 failed: java.net.SocketException: Software caused connection abort: recv failed | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.1.16:64114@61616
+2019-01-02 11:29:55,233 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Wed Jan 02 11:29:55 IST 2019]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2019-01-02 11:29:57,348 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2019-01-02 11:29:57,471 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2019-01-02 11:29:58,260 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2019-01-02 11:29:58,538 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2019-01-02 11:29:58,540 | INFO  | Recovery replayed 2 operations from the journal in 0.093 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2019-01-02 11:29:58,795 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-50671-1546408798570-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2019-01-02 11:29:58,969 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2019-01-02 11:29:58,969 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2019-01-02 11:29:58,974 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-50671-1546408798570-0:1) started | org.apache.activemq.broker.BrokerService | main
+2019-01-02 11:29:58,974 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2019-01-02 11:29:58,978 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 75340 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2019-01-02 11:29:59,112 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2019-01-02 11:29:59,746 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2019-01-02 11:29:59,747 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2019-01-02 11:29:59,981 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2019-01-02 11:30:00,671 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2019-01-02 11:30:00,756 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2019-01-02 11:30:00,782 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2019-01-02 11:30:00,818 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2019-01-02 11:30:00,878 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2019-01-02 11:30:00,951 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2019-01-02 14:52:15,406 | WARN  | Transport Connection to: tcp://127.0.0.1:55839 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55839@61616
+2019-01-02 14:52:46,138 | WARN  | Transport Connection to: tcp://127.0.0.1:55846 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55846@61616
+2019-01-02 14:54:40,213 | WARN  | Transport Connection to: tcp://127.0.0.1:55883 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55883@61616
+2019-01-02 19:35:59,703 | WARN  | Transport Connection to: tcp://192.168.1.202:55752 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.1.202:55752@61616
+2019-01-02 19:36:05,628 | WARN  | Transport Connection to: tcp://192.168.1.202:55787 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.1.202:55787@61616
+2019-01-02 19:37:41,973 | WARN  | Transport Connection to: tcp://192.168.1.202:55792 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.1.202:55792@61616
+2019-01-02 19:38:27,502 | WARN  | Transport Connection to: tcp://192.168.1.202:55801 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.1.202:55801@61616
+2019-01-02 23:13:00,928 | WARN  | Transport Connection to: tcp://127.0.0.1:62676 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:62676@61616
+2019-01-02 23:13:04,874 | WARN  | Transport Connection to: tcp://127.0.0.1:62674 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:62674@61616
+2019-01-03 01:02:00,139 | WARN  | Transport Connection to: tcp://127.0.0.1:54703 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54703@61616
+2019-01-03 01:03:03,046 | WARN  | Transport Connection to: tcp://127.0.0.1:54728 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54728@61616
+2019-01-03 01:05:11,119 | WARN  | Transport Connection to: tcp://127.0.0.1:54747 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54747@61616
+2019-01-03 01:05:23,823 | WARN  | Transport Connection to: tcp://127.0.0.1:54761 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54761@61616
+2019-01-03 11:59:26,616 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Thu Jan 03 11:59:26 IST 2019]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2019-01-03 11:59:27,774 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2019-01-03 11:59:27,795 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2019-01-03 11:59:28,939 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2019-01-03 11:59:29,136 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2019-01-03 11:59:29,139 | INFO  | Recovery replayed 2 operations from the journal in 0.099 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2019-01-03 11:59:29,464 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-62766-1546496969225-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2019-01-03 11:59:29,630 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2019-01-03 11:59:29,630 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2019-01-03 11:59:29,646 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-62766-1546496969225-0:1) started | org.apache.activemq.broker.BrokerService | main
+2019-01-03 11:59:29,647 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2019-01-03 11:59:29,649 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 77922 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2019-01-03 11:59:29,792 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2019-01-03 11:59:30,386 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2019-01-03 11:59:30,387 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2019-01-03 11:59:30,595 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2019-01-03 11:59:31,417 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2019-01-03 11:59:31,518 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2019-01-03 11:59:31,569 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2019-01-03 11:59:31,627 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2019-01-03 11:59:31,722 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2019-01-03 11:59:31,872 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2019-01-03 18:06:52,209 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=Test_Topic,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:63121@61616
+2019-01-03 22:01:23,395 | WARN  | Transport Connection to: tcp://127.0.0.1:49222 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49222@61616
+2019-01-03 22:07:34,449 | WARN  | Transport Connection to: tcp://192.168.1.16:50310 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.1.16:50310@61616
+2019-01-03 22:09:03,809 | WARN  | Transport Connection to: tcp://192.168.1.16:50623 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.1.16:50623@61616
+2019-01-03 22:12:09,729 | WARN  | Transport Connection to: tcp://192.168.1.16:50768 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.1.16:50768@61616
+2019-01-03 23:19:14,583 | WARN  | Transport Connection to: tcp://127.0.0.1:49364 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49364@61616
+2019-01-03 23:24:55,690 | WARN  | Transport Connection to: tcp://127.0.0.1:49657 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49657@61616
+2019-01-03 23:29:20,047 | WARN  | Transport Connection to: tcp://127.0.0.1:49682 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49682@61616
+2019-01-03 23:38:55,035 | WARN  | Transport Connection to: tcp://127.0.0.1:49770 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49770@61616
+2019-01-03 23:46:42,280 | WARN  | Transport Connection to: tcp://127.0.0.1:49802 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49802@61616
+2019-01-04 00:02:33,574 | WARN  | Transport Connection to: tcp://127.0.0.1:50056 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:50056@61616
+2019-01-04 00:07:37,771 | WARN  | Transport Connection to: tcp://127.0.0.1:50100 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:50100@61616
+2019-01-04 00:17:54,495 | WARN  | Transport Connection to: tcp://127.0.0.1:63447 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:63447@61616
+2019-01-04 00:17:54,501 | WARN  | Transport Connection to: tcp://127.0.0.1:63448 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:63448@61616
+2019-01-04 00:38:19,204 | WARN  | Transport Connection to: tcp://127.0.0.1:56227 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56227@61616
+2019-01-04 00:57:52,795 | WARN  | Transport Connection to: tcp://127.0.0.1:64535 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:64535@61616
+2019-01-04 01:01:24,743 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=Test_Topic1,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:64651@61616
+2019-01-04 01:04:05,575 | WARN  | Transport Connection to: tcp://127.0.0.1:64651 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:64651@61616
+2019-01-04 11:37:53,901 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@9f70c54: startup date [Fri Jan 04 11:37:53 IST 2019]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2019-01-04 11:37:55,726 | INFO  | PListStore:[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStore | main
+2019-01-04 11:37:55,768 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2019-01-04 11:38:06,110 | INFO  | KahaDB is version 4 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2019-01-04 11:38:06,455 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | main
+2019-01-04 11:38:06,456 | INFO  | Recovery replayed 2 operations from the journal in 0.157 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2019-01-04 11:38:06,700 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-65419-1546582086500-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2019-01-04 11:38:06,942 | INFO  | Listening for connections at: tcp://Madhan:61616?maximumConnections=1000&wireformat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2019-01-04 11:38:06,943 | INFO  | Connector openwire Started | org.apache.activemq.broker.TransportConnector | main
+2019-01-04 11:38:06,961 | INFO  | Apache ActiveMQ 5.7.0 (localhost, ID:Madhan-65419-1546582086500-0:1) started | org.apache.activemq.broker.BrokerService | main
+2019-01-04 11:38:06,962 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2019-01-04 11:38:06,964 | WARN  | Store limit is 102400 mb, whilst the data directory: C:\Users\NUIT-PC\Downloads\apache-activemq-5.7.0-bin\apache-activemq-5.7.0\bin\..\data\kahadb only has 77656 mb of usable space | org.apache.activemq.broker.BrokerService | main
+2019-01-04 11:38:07,107 | INFO  | jetty-7.6.7.v20120910 | org.eclipse.jetty.server.Server | main
+2019-01-04 11:38:07,683 | INFO  | ActiveMQ WebConsole initialized. | org.apache.activemq.web.WebConsoleStarter | main
+2019-01-04 11:38:07,683 | INFO  | started o.e.j.w.WebAppContext{/admin,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/admin/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2019-01-04 11:38:07,875 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2019-01-04 11:38:08,739 | INFO  | ActiveMQ Console at http://0.0.0.0:8161/admin | org.eclipse.jetty.webapp.WebAppContext | main
+2019-01-04 11:38:08,802 | INFO  | started o.e.j.w.WebAppContext{/demo,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/demo/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2019-01-04 11:38:08,822 | INFO  | Apache ActiveMQ Web Demo at http://0.0.0.0:8161/demo | org.eclipse.jetty.webapp.WebAppContext | main
+2019-01-04 11:38:08,866 | INFO  | started o.e.j.w.WebAppContext{/fileserver,file:/C:/Users/NUIT-PC/Downloads/apache-activemq-5.7.0-bin/apache-activemq-5.7.0/webapps/fileserver/} | org.eclipse.jetty.server.handler.ContextHandler | main
+2019-01-04 11:38:08,930 | INFO  | RESTful file access application at http://0.0.0.0:8161/fileserver | org.eclipse.jetty.webapp.WebAppContext | main
+2019-01-04 11:38:08,977 | INFO  | Started SelectChannelConnector@0.0.0.0:8161 | org.eclipse.jetty.server.AbstractConnector | main
+2019-01-04 11:52:38,318 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=Test_Topic,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:49167@61616
+2019-01-04 11:54:57,028 | WARN  | Transport Connection to: tcp://192.168.1.202:53416 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.1.202:53416@61616
+2019-01-04 11:54:59,437 | WARN  | Transport Connection to: tcp://127.0.0.1:49167 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49167@61616
+2019-01-04 15:20:02,749 | WARN  | Failed to register MBean: org.apache.activemq:BrokerName=localhost,Type=Subscription,persistentMode=Durable,subscriptionID=SUB1234,destinationType=Topic,destinationName=Topic1,clientId=12345 | org.apache.activemq.broker.jmx.ManagedRegionBroker | ActiveMQ Transport: tcp:///127.0.0.1:51258@61616
+2019-01-04 16:11:16,319 | WARN  | Transport Connection to: tcp://127.0.0.1:51258 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:51258@61616
+2019-01-04 16:19:00,635 | WARN  | Transport Connection to: tcp://127.0.0.1:51749 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:51749@61616
+2019-01-04 16:19:31,238 | WARN  | Transport Connection to: tcp://127.0.0.1:51807 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:51807@61616
+2019-01-04 17:29:27,810 | INFO  | Connector vm://localhost Started | org.apache.activemq.broker.TransportConnector | qtp811597470-33
+2019-01-04 18:00:08,691 | INFO  | Connector vm://localhost Stopped | org.apache.activemq.broker.TransportConnector | HashSessionScavenger-0
